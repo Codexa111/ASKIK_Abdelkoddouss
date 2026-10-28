@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Portfolio d'ASKIK ABDELKODDOUSS, élève en Terminale Sciences physiques, intéressé par le génie mécanique et l'industrie automobile.">
+  <title>ASKIK ABDELKODDOUSS — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
+  <style>
+    :root{--rgb:93,225,242;--bg:#080d17;--panel:#101827;--panel2:#141f31;--text:#f2f5fa;--muted:#aab5c7;--line:rgba(183,199,222,.16);--cyan:#5de1f2;--blue:#6ea8ff;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:radial-gradient(ellipse at 78% 2%,rgba(37,111,155,.18),transparent 34%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}button,a{ -webkit-tap-highlight-color:transparent}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(8,13,23,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.04em}.brand span{color:var(--cyan)}
+    .links{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.links a:hover{color:var(--cyan)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 12px;font-size:1.2rem}
+    .hero{min-height:calc(92vh - 76px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:54px;padding-top:64px;padding-bottom:72px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--cyan);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+    .dot{width:8px;height:8px;background:var(--cyan);border-radius:50%;box-shadow:0 0 18px var(--cyan)}
+    h1,h2,h3,p{margin-top:0}h1{font:700 clamp(2.8rem,6vw,5.7rem)/.99 "Space Grotesk",sans-serif;letter-spacing:-.065em;margin:22px 0}
+    h1 em{font-style:normal;color:var(--cyan)}.lead{color:var(--muted);font-size:1.12rem;max-width:610px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:12px;border:1px solid var(--line);font-weight:700;transition:transform .2s,background .2s,border-color .2s}
+    .btn:hover{transform:translateY(-3px);border-color:rgba(var(--rgb),.55)}.btn.primary{background:var(--cyan);color:#06121b;border-color:var(--cyan)}.btn.primary:hover{background:#a0f3fb}
+    .hero-art{position:relative;min-height:440px;display:grid;place-items:center}
+    .orbit{position:absolute;border:1px solid rgba(var(--rgb),.23);border-radius:50%;width:min(100%,420px);aspect-ratio:1;animation:rotate 35s linear infinite}
+    .orbit:before,.orbit:after{content:"";position:absolute;width:10px;height:10px;background:var(--cyan);border-radius:50%;box-shadow:0 0 20px var(--cyan)}.orbit:before{top:16%;left:13%}.orbit:after{bottom:13%;right:14%;background:var(--blue)}
+    .photo-frame{position:relative;width:min(72%,300px);aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:1px solid rgba(var(--rgb),.45);background:linear-gradient(145deg,#172b41,#0b1423);box-shadow:0 30px 90px rgba(0,0,0,.35)}
+    .photo-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .photo-placeholder{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:15px;text-align:center;padding:24px;color:var(--muted)}
+    .photo-placeholder svg{width:86px;height:86px;opacity:.9}.photo-placeholder strong{color:white;font-family:"Space Grotesk",sans-serif;font-size:1.15rem}
+    .float-tag{position:absolute;background:rgba(16,24,39,.92);border:1px solid var(--line);border-radius:14px;padding:12px 15px;box-shadow:0 12px 35px rgba(0,0,0,.22);font-size:.85rem;backdrop-filter:blur(10px)}
+    .float-tag b{display:block;color:var(--cyan);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}.tag-one{top:18%;right:-1%}.tag-two{bottom:13%;left:-2%}
+    section{padding:90px 0}.section-head{max-width:700px;margin-bottom:34px}.kicker{color:var(--cyan);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.77rem}.section-head h2{font:700 clamp(2rem,4vw,3.2rem)/1.1 "Space Grotesk",sans-serif;letter-spacing:-.045em;margin:12px 0}.section-head p{color:var(--muted)}
+    .grid{display:grid;gap:18px}.about-grid{grid-template-columns:1.15fr .85fr}.card{background:linear-gradient(145deg,rgba(20,31,49,.94),rgba(12,20,33,.96));border:1px solid var(--line);border-radius:20px;padding:25px}
+    .card h3{font:600 1.22rem "Space Grotesk",sans-serif;margin-bottom:10px}.card p{color:var(--muted);margin-bottom:0}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.fact{padding:14px;border-radius:13px;background:rgba(255,255,255,.035);border:1px solid var(--line)}.fact small{display:block;color:var(--muted);font-size:.78rem}.fact strong{font-size:.95rem}
+    .timeline{position:relative;display:grid;gap:18px}.timeline-item{display:grid;grid-template-columns:170px 1fr;gap:20px}.time{color:var(--cyan);font-weight:700;padding-top:23px}.timeline-item .card{position:relative}.timeline-item .card:before{content:"";position:absolute;left:-27px;top:30px;width:9px;height:9px;background:var(--cyan);border-radius:50%;box-shadow:0 0 0 5px rgba(var(--rgb),.1)}.timeline{margin-left:8px;border-left:1px solid rgba(var(--rgb),.28);padding-left:20px}
+    .bullets{padding-left:19px;color:var(--muted);margin-bottom:0}.bullets li{margin:7px 0}.skill-grid{grid-template-columns:repeat(3,1fr)}.skill-card .icon{font-size:1.6rem;margin-bottom:12px}.pill-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.pill{font-size:.82rem;color:#dce8f7;border:1px solid var(--line);background:rgba(255,255,255,.035);padding:7px 10px;border-radius:999px}
+    .project-grid{grid-template-columns:repeat(2,1fr)}.project-card{min-height:220px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.project-card:after{content:"";position:absolute;width:190px;height:190px;right:-65px;bottom:-80px;border:1px solid rgba(var(--rgb),.22);border-radius:50%;box-shadow:0 0 0 22px rgba(var(--rgb),.025),0 0 0 44px rgba(var(--rgb),.02)}.project-card>*{position:relative;z-index:1}.project-label{color:var(--cyan);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+    .interest-grid{grid-template-columns:repeat(4,1fr)}.interest{padding:22px}.interest .emoji{font-size:1.7rem}.interest h3{margin:12px 0 6px}.interest p{font-size:.92rem}
+    .contact-panel{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;background:linear-gradient(120deg,rgba(20,45,63,.8),rgba(16,24,39,.92));border:1px solid var(--line);padding:34px;border-radius:24px}.contact-list{display:grid;gap:12px}.contact-link{padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.12);overflow-wrap:anywhere}.contact-link span{display:block;font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.contact-link strong{font-size:.98rem}
+    footer{padding:25px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .js .reveal{opacity:0;translate:0 26px;transition:opacity .8s ease,translate .8s cubic-bezier(.2,.7,.2,1),transform .25s ease-out}.js .reveal.visible{opacity:1;translate:0 0}
+
+    body:before{content:"";position:fixed;inset:0;z-index:-2;background-image:linear-gradient(rgba(var(--rgb),.055) 1px,transparent 1px),linear-gradient(90deg,rgba(var(--rgb),.055) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 5%,transparent 72%);mask-image:radial-gradient(ellipse at 50% 30%,#000 5%,transparent 72%)}
+    .glow{position:fixed;width:64vmax;height:64vmax;left:50%;top:-10vmax;margin-left:-32vmax;z-index:-1;pointer-events:none;background:radial-gradient(circle,rgba(var(--rgb),.14),transparent 62%);will-change:transform}
+    #bar{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--blue),var(--cyan));z-index:50}
+    #rail{position:fixed;left:12px;top:90px;z-index:5;pointer-events:none;display:none}
+    @media(min-width:1300px){#rail{display:block}}
+    #rail path{fill:none;stroke-width:2;stroke-linecap:round}.rail-bg{stroke:rgba(var(--rgb),.16)}.rail-fg{stroke:var(--cyan)}.rail-dot{fill:var(--cyan);filter:drop-shadow(0 0 7px var(--cyan))}
+    .links a{transition:color .25s}.links a.active{color:var(--cyan)}
+    .hero-art{perspective:1100px}.stage{position:absolute;inset:0;display:grid;place-items:center;transform-style:preserve-3d;will-change:transform}
+    #gear{position:absolute;inset:0;width:100%;height:100%;translate:0 0 -60px;pointer-events:none}
+    .stage .orbit{translate:0 0 -25px}.stage .photo-frame{translate:0 0 55px;box-shadow:0 40px 90px rgba(0,0,0,.45),0 0 60px rgba(var(--rgb),.12)}.stage .float-tag{translate:0 0 120px}
+    .photo-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.16) 50%,transparent 65%);transform:translateX(var(--sx,-60%));pointer-events:none}
+    .card{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out,border-color .3s,box-shadow .3s;will-change:transform}
+    .card:hover{border-color:rgba(var(--rgb),.5);box-shadow:0 26px 60px rgba(0,0,0,.35),0 0 44px rgba(var(--rgb),.1)}
+    .timeline:after{content:"";position:absolute;left:-2px;top:0;bottom:0;width:3px;border-radius:3px;background:linear-gradient(var(--blue),var(--cyan));box-shadow:0 0 14px rgba(var(--rgb),.6);transform-origin:top;transform:scaleY(var(--p,0))}
+    .timeline-item .card:before{background:var(--cyan)}
+    .car-wrap{margin:0 auto 34px;max-width:780px}.car-wrap svg{width:100%;height:auto;overflow:visible}
+    .car-wrap path,.car-wrap circle{fill:none;stroke:var(--cyan);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+    .car-wrap .body{transition:fill .9s}.car-wrap.done .body{fill:rgba(var(--rgb),.08)}
+    .car-wrap .ground{stroke-dasharray:8 12;stroke-dashoffset:0;stroke-width:1.6;opacity:.45}.wheel{transform-box:fill-box;transform-origin:center}
+    @media(prefers-reduced-motion:reduce){.car-wrap path,.car-wrap circle{stroke-dashoffset:0!important}.card{transform:none}}
+    @keyframes rotate{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-8px)}}.tag-one{animation:float 5s ease-in-out infinite}.tag-two{animation:float 5s ease-in-out -2s infinite}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:20px;padding-top:58px}.hero-art{min-height:380px;order:-1}.photo-frame{width:240px}.orbit{width:330px}.tag-one{right:5%}.tag-two{left:5%}.about-grid,.contact-panel{grid-template-columns:1fr}.skill-grid{grid-template-columns:1fr 1fr}.interest-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:650px){.wrap{width:min(100% - 28px,var(--max))}.nav-inner{height:66px}.menu{display:block}.links{display:none;position:absolute;top:66px;left:0;right:0;background:#0b1220;padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;gap:15px}.links.open{display:flex}.hero{min-height:auto;padding:44px 0 55px}h1{font-size:clamp(2.6rem,14vw,4.4rem)}.hero-art{min-height:325px}.photo-frame{width:205px;border-radius:22px}.orbit{width:280px}.float-tag{font-size:.75rem;padding:9px 11px}.tag-one{top:13%;right:0}.tag-two{bottom:10%;left:0}section{padding:65px 0}.timeline-item{grid-template-columns:1fr;gap:7px}.time{padding-top:0}.timeline{padding-left:17px}.timeline-item .card:before{left:-24px;top:25px}.skill-grid,.project-grid{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}.contact-panel{padding:22px}.footer-inner{display:block}.footer-inner span{display:block;margin-top:7px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.js .reveal{opacity:1;translate:none}}
+  </style>
+</head>
+<body>
+  <div id="bar"></div><div class="glow"></div>
+  <svg id="rail" aria-hidden="true"><path class="rail-bg"/><path class="rail-fg"/><circle class="rail-dot" r="5"/></svg>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#accueil" aria-label="Accueil">AA<span>.</span></a>
+      <button class="menu" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      <nav class="links" id="navLinks" aria-label="Navigation principale">
+        <a href="#apropos">À propos</a><a href="#parcours">Parcours</a><a href="#competences">Compétences</a><a href="#projets">Projets</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="accueil">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="dot"></span> Portfolio personnel · Tanger, Maroc</div>
+        <h1>ASKIK<br><em>ABDELKODDOUSS</em></h1>
+        <p class="lead">Élève en Terminale Sciences physiques, passionné par la mécanique, les sciences et l’industrie automobile. Mon objectif : poursuivre mes études en génie mécanique et contribuer à la conception de systèmes mécaniques.</p>
+        <div class="actions">
+          <a class="btn primary" href="assets/CV_Askik_Abdelkoddouss.pdf" download>↓ Télécharger mon CV</a>
+          <a class="btn" href="#apropos">Découvrir mon profil <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <div class="hero-art reveal" aria-label="Photo personnelle">
+        <div class="stage" id="stage"><canvas id="gear" aria-hidden="true"></canvas><div class="orbit"></div>
+        <div class="photo-frame" id="photoFrame">
+          <img src="assets/photo.jpg" alt="Photo de ASKIK ABDELKODDOUSS">
+        </div>
+        <div class="float-tag tag-one"><b>Objectif</b>Génie mécanique</div>
+        <div class="float-tag tag-two"><b>Intérêt</b>Industrie automobile</div></div>
+      </div>
+    </section>
+
+    <section id="apropos">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">01 / À propos</div><h2>Curieux des sciences.<br>Attiré par la mécanique.</h2><p>Un profil en construction, avec l’envie d’apprendre, de découvrir l’environnement industriel et de poursuivre un parcours scientifique.</p></div>
+        <div class="grid about-grid">
+          <article class="card reveal"><h3>Mon profil</h3><p>Actuellement en Terminale Sciences physiques au lycée L’Univers à Tanger, je prépare le baccalauréat pour l’année scolaire 2026–2027. Je m’intéresse aux sciences, à la mécanique et aux technologies industrielles. Je souhaite approfondir mes connaissances en mécanique, en matériaux et en conception de systèmes.</p></article>
+          <article class="card reveal"><h3>En bref</h3><div class="facts"><div class="fact"><small>Ville</small><strong>Tanger, Maroc</strong></div><div class="fact"><small>Formation</small><strong>Terminale – Sciences physiques</strong></div><div class="fact"><small>Établissement</small><strong>Lycée L’Univers</strong></div><div class="fact"><small>Projet</small><strong>Licence en France</strong></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="parcours">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">02 / Parcours</div><h2>Formation & première immersion professionnelle</h2><p>Les étapes présentées ci-dessous sont celles qui figurent dans mon CV.</p></div>
+        <div class="timeline">
+          <div class="timeline-item reveal"><div class="time">2026 — 2027</div><article class="card"><h3>Terminale – Sciences physiques</h3><p><strong>Lycée L’Univers · Tanger, Maroc</strong></p><ul class="bullets"><li>Préparation au baccalauréat.</li><li>Parcours axé sur les mathématiques et les sciences physiques.</li></ul></article></div>
+          <div class="timeline-item reveal"><div class="time">Juillet — août 2026</div><article class="card"><h3>Stage d’été · Société ITD</h3><p>Découverte de l’environnement industriel et familiarisation avec les méthodes de travail.</p><ul class="bullets"><li>Observation des procédés techniques.</li><li>Découverte des équipements et outils du domaine mécanique.</li><li>Développement de la rigueur, de l’esprit d’équipe et du sens de l’organisation.</li></ul></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">03 / Compétences</div><h2>Les bases sur lesquelles je construis mon parcours.</h2><p>Les compétences sont reprises du CV. Les logiciels de conception mécanique restent à confirmer et ne sont donc pas affichés comme acquis.</p></div>
+        <div class="grid skill-grid">
+          <article class="card skill-card reveal"><div class="icon">⌁</div><h3>Sciences</h3><p>Connaissances en mathématiques et en sciences physiques.</p><div class="pill-list"><span class="pill">Mathématiques</span><span class="pill">Sciences physiques</span></div></article>
+          <article class="card skill-card reveal"><div class="icon">▤</div><h3>Informatique</h3><p>Utilisation des outils bureautiques mentionnés dans mon CV.</p><div class="pill-list"><span class="pill">Microsoft Word</span><span class="pill">Microsoft Excel</span></div></article>
+          <article class="card skill-card reveal"><div class="icon">◎</div><h3>Qualités personnelles</h3><p>Des qualités mobilisées dans les études et le travail en équipe.</p><div class="pill-list"><span class="pill">Motivation</span><span class="pill">Curiosité technique</span><span class="pill">Rigueur</span><span class="pill">Esprit d’équipe</span></div></article>
+        </div>
+        <div class="card reveal" style="margin-top:18px"><h3>Langues</h3><div class="pill-list"><span class="pill">Arabe · bon niveau</span><span class="pill">Français · niveau intermédiaire</span><span class="pill">Anglais · niveau débutant</span></div></div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">04 / Projets & objectifs</div><h2>Un projet d’avenir tourné vers l’ingénierie.</h2><p>Aucun projet technique déjà réalisé n’est détaillé dans le CV. Cette section présente donc les objectifs, sans inventer de réalisations.</p></div>
+        <div class="car-wrap reveal" aria-hidden="true"><svg viewBox="0 0 600 190">
+          <path pathLength="1" class="body" d="M30 142V120Q32 108 52 104L148 96L204 54Q212 48 226 48H372Q386 48 396 57L442 98L528 106Q566 112 570 132V142H534M466 142H194M126 142H30"/>
+          <path pathLength="1" d="M126 142A34 34 0 0 1 194 142M466 142A34 34 0 0 1 534 142"/>
+          <path pathLength="1" d="M158 96L208 60H298V96ZM312 60H372Q380 60 386 66L418 96H312Z"/>
+          <path pathLength="1" d="M305 60V138M270 78H288M545 112H560"/>
+          <g class="wheel"><circle pathLength="1" cx="160" cy="148" r="30"/><circle pathLength="1" cx="160" cy="148" r="11"/><path pathLength="1" d="M160 118V178M130 148H190"/></g>
+          <g class="wheel"><circle pathLength="1" cx="500" cy="148" r="30"/><circle pathLength="1" cx="500" cy="148" r="11"/><path pathLength="1" d="M500 118V178M470 148H530"/></g>
+          <path class="ground" d="M0 178H600"/></svg></div>
+        <div class="grid project-grid">
+          <article class="card project-card reveal"><div><div class="project-label">Objectif académique</div><h3>Licence en génie mécanique</h3><p>Intégrer une formation en France pour approfondir mes connaissances en mécanique, matériaux et conception de systèmes.</p></div><div class="pill-list"><span class="pill">Formation</span><span class="pill">Sciences appliquées</span></div></article>
+          <article class="card project-card reveal"><div><div class="project-label">Orientation professionnelle</div><h3>Industrie automobile</h3><p>M’orienter à terme vers le secteur automobile et contribuer à la conception et à l’amélioration de systèmes mécaniques.</p></div><div class="pill-list"><span class="pill">Mécanique</span><span class="pill">Technologies industrielles</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="interets">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="kicker">05 / Centres d’intérêt</div><h2>Ce qui nourrit ma curiosité.</h2></div>
+        <div class="grid interest-grid">
+          <article class="card interest reveal"><div class="emoji">♟</div><h3>Échecs</h3><p>Membre d’un club d’échecs ; concentration, stratégie et analyse.</p></article>
+          <article class="card interest reveal"><div class="emoji">⚽</div><h3>Sport</h3><p>Football et activités sportives ; endurance, discipline et esprit d’équipe.</p></article>
+          <article class="card interest reveal"><div class="emoji">♫</div><h3>Musique</h3><p>Écoute et pratique musicale, créativité et gestion du stress.</p></article>
+          <article class="card interest reveal"><div class="emoji">⚙</div><h3>Technique</h3><p>Génie mécanique, industrie automobile et technologies industrielles.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-panel reveal">
+          <div><div class="kicker">06 / Contact</div><h2 style="font:700 clamp(2rem,4vw,3rem)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.04em;margin:12px 0">Échangeons.</h2><p style="color:var(--muted)">Pour toute prise de contact au sujet de mon parcours ou de mes objectifs d’études, vous pouvez me joindre par email ou téléphone.</p><a class="btn primary" href="mailto:askikabdelkoddouss@gmail.com">✉ M’envoyer un email</a></div>
+          <div class="contact-list">
+            <a class="contact-link" href="mailto:askikabdelkoddouss@gmail.com"><span>Email</span><strong>askikabdelkoddouss@gmail.com</strong></a>
+            <a class="contact-link" href="tel:+212646468679"><span>Téléphone</span><strong>+212 646-468679</strong></a>
+            <div class="contact-link"><span>Localisation</span><strong>Tanger, Maroc</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><div>© <span id="year"></span> ASKIK ABDELKODDOUSS</div><span>Portfolio personnel · Génie mécanique & industrie automobile</span></div></footer>
+  <script>
+(()=>{
+const d=document,root=d.documentElement,$=q=>d.querySelector(q),$$=q=>[...d.querySelectorAll(q)];
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),hex=h=>[1,3,5].map(i=>parseInt(h.substr(i,2),16));
+// Menu mobile
+const menuBtn=$('#menuBtn'),navLinks=$('#navLinks');
+const setMenu=o=>{navLinks.classList.toggle('open',o);menuBtn.setAttribute('aria-expanded',String(o));menuBtn.textContent=o?'×':'☰'};
+menuBtn.addEventListener('click',()=>setMenu(!navLinks.classList.contains('open')));
+$$('#navLinks a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+// Apparition (avec secours si IntersectionObserver absent)
+const rv=$$('.reveal');
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});rv.forEach(e=>io.observe(e))}else rv.forEach(e=>e.classList.add('visible'));
+$('#year').textContent=new Date().getFullYear();
+
+// Couleur par section (interpolée en douceur)
+const accents={accueil:'#5de1f2',apropos:'#6ea8ff',parcours:'#ffb454',competences:'#6ff2a6',projets:'#ff7a93',interets:'#c79bff',contact:'#5de1f2'};
+let col=hex('#5de1f2'),tgt=col.slice(),curId='';
+const setCol=()=>{const c=col.map(Math.round);root.style.setProperty('--cyan','rgb('+c+')');root.style.setProperty('--rgb',c.join(','))};
+
+// Éléments animés
+const secs=$$('main section'),links=$$('#navLinks a'),bar=$('#bar'),glow=$('.glow'),tl=$('.timeline'),car=$('.car-wrap');
+const carEls=$$('.car-wrap [pathLength]'),wheels=$$('.car-wrap .wheel'),road=$('.car-wrap .ground');
+const rail=$('#rail'),rbg=rail.querySelector('.rail-bg'),rfg=rail.querySelector('.rail-fg'),rdot=rail.querySelector('.rail-dot');
+let railLen=1;
+function buildRail(){const H=Math.max(300,innerHeight-120);rail.setAttribute('viewBox','0 0 40 '+H);rail.setAttribute('width',40);rail.setAttribute('height',H);
+ let p='';for(let y=0;y<=H;y+=6)p+=(y?'L':'M')+(20+10*Math.sin(y/46)).toFixed(1)+' '+y;
+ rbg.setAttribute('d',p);rfg.setAttribute('d',p);railLen=rfg.getTotalLength();rfg.style.strokeDasharray=railLen}
+
+let dirty=true;
+function update(){
+ dirty=false;const y=scrollY,p=clamp(y/Math.max(1,root.scrollHeight-innerHeight));
+ bar.style.transform='scaleX('+p+')';
+ glow.style.transform='translate3d('+Math.sin(p*7)*16+'vw,'+p*45+'vh,0)';
+ if(rail.clientWidth||getComputedStyle(rail).display!=='none'){rfg.style.strokeDashoffset=railLen*(1-p);const pt=rfg.getPointAtLength(railLen*p);rdot.setAttribute('cx',pt.x);rdot.setAttribute('cy',pt.y)}
+ const mid=innerHeight*.45;let id='';
+ for(const s of secs){const r=s.getBoundingClientRect();if(r.top<=mid&&r.bottom>mid){id=s.id;break}}
+ if(id&&id!==curId){curId=id;tgt=hex(accents[id]||'#5de1f2');links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));if(rm){col=tgt.slice();setCol()}}
+ if(tl){const r=tl.getBoundingClientRect();tl.style.setProperty('--p',clamp((innerHeight*.72-r.top)/r.height))}
+ if(car){const r=car.getBoundingClientRect(),cp=rm?1:clamp((innerHeight*.9-r.top)/(innerHeight*.5)),n=carEls.length;
+  carEls.forEach((e,i)=>e.style.strokeDashoffset=1-clamp((cp-i/n*.5)/.5));
+  car.classList.toggle('done',cp>.98);
+  wheels.forEach(w=>w.style.transform='rotate('+y*.35+'deg)');
+  if(road)road.style.strokeDashoffset=-y*.6}
+}
+addEventListener('scroll',()=>{dirty=true;if(rm)requestAnimationFrame(update)},{passive:true});
+addEventListener('resize',()=>{buildRail();sizeGear();dirty=true;if(rm){requestAnimationFrame(update);drawGear(0,true)}});
+
+// Engrenage 3D en fil de fer (dessiné en direct)
+const cv=$('#gear'),cx=cv.getContext('2d');let W=0,H=0,dpr=1;
+function sizeGear(){dpr=Math.min(2,devicePixelRatio||1);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr}
+const N=12,T=.22,V=[],E=[];
+for(let i=0;i<N;i++){const a=i*2*Math.PI/N,s=2*Math.PI/N;[[.78,0],[1,.18],[1,.46],[.78,.64]].forEach(([r,k])=>V.push([r*Math.cos(a+k*s),r*Math.sin(a+k*s)]))}
+V.forEach((a,i)=>{const b=V[(i+1)%V.length];E.push([a[0],a[1],T,b[0],b[1],T],[a[0],a[1],-T,b[0],b[1],-T]);if(i%2===0)E.push([a[0],a[1],T,a[0],a[1],-T])});
+for(let j=0;j<16;j++){const a=j/16*2*Math.PI,b=(j+1)/16*2*Math.PI,r=.28;E.push([r*Math.cos(a),r*Math.sin(a),T,r*Math.cos(b),r*Math.sin(b),T],[r*Math.cos(a),r*Math.sin(a),-T,r*Math.cos(b),r*Math.sin(b),-T]);if(j%4===0)E.push([r*Math.cos(a),r*Math.sin(a),T,r*Math.cos(a),r*Math.sin(a),-T])}
+for(let k=0;k<6;k++){const a=k*Math.PI/3;E.push([.28*Math.cos(a),.28*Math.sin(a),T,.78*Math.cos(a),.78*Math.sin(a),T])}
+let t0=0;
+function proj(x,y,z,rz,rx,ry,k){const c=Math.cos(rz),s=Math.sin(rz),x1=x*c-y*s,y1=x*s+y*c,cy=Math.cos(ry),sy=Math.sin(ry),x2=x1*cy+z*sy,z2=-x1*sy+z*cy,cX=Math.cos(rx),sX=Math.sin(rx),y3=y1*cX-z2*sX,z3=y1*sX+z2*cX,f=3.4/(3.4-z3);return[W/2+x2*f*k,H/2+y3*f*k,z3]}
+function drawGear(t,full){
+ if(!W)return;cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,W,H);
+ if(!t0)t0=t;const prog=full?1:clamp((t-t0)/2800),show=(1-Math.pow(1-prog,3))*E.length,k=Math.min(W,H)*.33,rz=full?.3:t*.00035+scrollY*.003;
+ cx.lineWidth=1.6;cx.lineCap='round';cx.shadowBlur=8;cx.shadowColor='rgb('+col.map(Math.round)+')';
+ const rgb=col.map(Math.round).join(',');
+ for(let i=0;i<E.length&&i<show;i++){const e=E[i],part=Math.min(1,show-i),a=proj(e[0],e[1],e[2],rz,-.6,.5,k),b=proj(e[3],e[4],e[5],rz,-.6,.5,k);
+  cx.strokeStyle='rgba('+rgb+','+(.3+.6*clamp((a[2]+1.2)/2.4))+')';cx.beginPath();cx.moveTo(a[0],a[1]);cx.lineTo(a[0]+(b[0]-a[0])*part,a[1]+(b[1]-a[1])*part);cx.stroke()}
+}
+
+// Scène 3D (inclinaison souris / balancement doux) + boucle principale
+const stage=$('#stage'),photo=$('#photoFrame');let px=0,py=0,sx=0,sy=0,heroOn=true,mouse=false;
+if('IntersectionObserver' in window)new IntersectionObserver(es=>heroOn=es[0].isIntersecting).observe($('#accueil'));
+if(fine&&!rm)addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;mouse=true;px=(e.clientX/innerWidth-.5)*2;py=(e.clientY/innerHeight-.5)*2},{passive:true});
+function frame(t){
+ let ch=false;for(let i=0;i<3;i++){const dv=tgt[i]-col[i];if(Math.abs(dv)>.4){col[i]+=dv*.07;ch=true}else col[i]=tgt[i]}
+ if(ch)setCol();
+ if(dirty)update();
+ if(heroOn){const tx=mouse?px*15:Math.sin(t/1900)*8,ty=mouse?-py*10:Math.cos(t/2400)*5;sx+=(tx-sx)*.08;sy+=(ty-sy)*.08;
+  stage.style.transform='rotateY('+sx.toFixed(2)+'deg) rotateX('+sy.toFixed(2)+'deg)';photo.style.setProperty('--sx',(sx*5-60).toFixed(1)+'%');drawGear(t)}
+ requestAnimationFrame(frame)}
+// Inclinaison 3D des cartes (souris uniquement)
+let tiltEl=null;const clr=c=>{if(c){c.style.removeProperty('--rx');c.style.removeProperty('--ry')}};
+if(fine&&!rm){d.addEventListener('pointermove',e=>{if(e.pointerType!=='mouse')return;const c=e.target.closest&&e.target.closest('.card');if(tiltEl&&tiltEl!==c)clr(tiltEl);tiltEl=c;if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*9+'deg');c.style.setProperty('--rx',-((e.clientY-r.top)/r.height-.5)*9+'deg')},{passive:true});
+ root.addEventListener('pointerleave',()=>{clr(tiltEl);tiltEl=null})}
+
+buildRail();sizeGear();setCol();update();
+if(rm){drawGear(0,true)}else requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
